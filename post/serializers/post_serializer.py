@@ -11,5 +11,8 @@ class PostSerializer(serializers.ModelSerializer):
         user = self.context['request'].user
         if not user or not user.is_authenticated:
             raise serializers.ValidationError("User must be authenticated to create a post.")
+
+        validated_data.pop('user', None)
+
         post = Post.objects.create(user=user, **validated_data)
         return post
