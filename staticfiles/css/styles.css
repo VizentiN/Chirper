@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400, 700;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+}
+
+header {
+    background-color: #8fbc8f;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+.logo_img {
+    width: 18px;
+    height: 18px;
+}
+
+nav ul {
+    margin-top: 8px;
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+main {
+    padding: 20px;
+    text-align: center;
+}
+
+footer {
+    background-color: #2e8b57;
+    color: white;
+    text-align: center;
+    padding: 10px 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+button {
+    margin-top: 10px;
+    background-color: #2e8b57;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #8fbc8f;
+}
+
+input[type="text"],
+input[type="password"] {
+    padding: 10px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="submit"] {
+    background-color: #6b8e23;
+    color: white;
+    padding: 10px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+}
+
+.auth-container {
+    max-width: 360px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.auth-form label {
+    margin-top: 16px;
+    display: block;
+    color: #333;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 6px;
+    margin-bottom: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.auth-form button {
+    margin: 16px 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.auth-form button:hover {
+    background-color: #8fbc8f;
+}
+
+.signup-link {
+    margin-top: 20px;
+    text-align: center;
+}
+
+input[type="submit"]:hover {
+    background-color: #8fbc8f;
+}
+
+.post-container {
+    margin: 20px auto;
+    width: 80%;
+    background-color: #f0fff0; 
+    border: 1px solid #8fbc8f;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.post {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    border-left: 5px solid #8fbc8f;
+}
+
+.post h2 {
+    color: #2e8b57; 
+    margin: 0 0 10px 0;
+}
+
+.post p {
+    line-height: 1.6;
+}
+
+.post-meta {
+    font-style: italic;
+    color: #666;
+    font-size: 0.85em;
+}
+
+.new-post-button {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #45a049;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border-radius: 5px;
+    text-align: center;
+    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.new-post-button:hover {
+    background-color: #8fbc8f;
+    cursor: pointer;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+.textarea_post {
+    width: 95%;
+    height: 100px;
+    resize: none;
+    margin-top: 16px;
+    padding: 4px 4px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    right: 0;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chirper</title>
+    <link rel="shortcut icon" href="../../static/images/icone_chirper.ico" type="image/x-icon">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <img class='logo_img' src="../../static/images/logo_chirper.png" alt="logo do site de posts chirper">
+        <nav>
+            <ul>
+                {% if not user.is_authenticated %}
+                    <li><a href="{% url 'home' %}">Home</a></li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'posts' %}">Posts</a></li>
+                    <li><a class="logout_line" href="{% url 'logout' %}">Deslogar</a></li>
+                {% else %}
+                    <li><a href="{% url 'signup' %}">Criar Conta</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        {% block content %}
+        {% endblock content %}
+    </main>
+
+    <footer>
+        <p>© 2024 Chirper. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="{% static 'js/modal.js' %}"></script>
+    <script src="{% static 'js/password_validation.js' %}"></script>
+    <script src="{% static 'js/signup_ajax.js' %}"></script>
+</body>
+</html>

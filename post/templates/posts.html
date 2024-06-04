@@ -1,0 +1,25 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+<button class="new-post-button" id="myBtn">Novo Post</button>
+<div id="newPostModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Criando um Novo Post</h2>
+        <form action="{% url 'create_post' %}" method="POST">
+            {% csrf_token %}
+            <textarea class="textarea_post" name="content" required placeholder="Escreva alguma coisa..."></textarea>
+            <button type="submit">Post</button>
+        </form>
+    </div>
+</div>
+<div class="post-container">
+    {% for post in posts %}
+    <div class="post">
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <div class="post-meta">Postado por {{ post.user.username }} a {{ post.created_at }}</div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
