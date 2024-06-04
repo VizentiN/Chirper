@@ -1,0 +1,11 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+    <div class="home_content">
+        <h2>Vem que ta voando!</h2>
+        <p>Este é um site de posts e diversões ao qual você pode postar como você está se sentindo e também poderá ver como os outros estão se sentindo!</p>
+        <h3>SEJA LIVRE COMO UM PASSÁRO E CANTE PARA O MUNDO!</h3>
+        <p>Caso você ainda não tenha uma conta, no botão abaixo te faz ser parte dessa comunidade!</p>
+        <a href="{% url 'signup' %}"><button>Registrar-se</button></a>
+    </div>
+{% endblock %}

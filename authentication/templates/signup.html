@@ -1,0 +1,31 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+{% if messages %}
+<ul class="messages">
+    {% for message in messages %}
+    <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
+<div class="auth-container">
+    <h2>Registre-se</h2>
+    <form id="signupForm" method="post" class="auth-form" action="{% url 'signup' %}" data-signup-url="{% url 'signup' %}" data-home-url="{% url 'home' %}">
+        {% csrf_token %}
+        <label for="id_username">Usuário</label>
+        {{ form.username }}
+        
+        <label for="id_email">E-mail</label>
+        {{ form.email }}
+
+        <label for="id_password1">Senha</label>
+        {{ form.password1 }}
+
+        <label for="id_password2">Confirme sua Senha</label>
+        {{ form.password2 }}
+
+        <button type="submit" class="auth-btn">Registre-se</button>
+    </form>
+    <div id="signupErrors" class="errors"></div>
+</div>
+{% endblock %}
