@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Security settings
 SECRET_KEY = 'django-insecure-i5zm%8tqictr+rrhwb02^7)6+@@x90l40k-&*)x7pudm-7wdee'
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'lvizentin.pythonanywhere.com']
 
 # Application definition
 INSTALLED_APPS = [
